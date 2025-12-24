@@ -1,0 +1,495 @@
+{% extends 'base.html' %}
+{% block title %}Web Development Services{% endblock %}
+{% load static %}
+{% block content %}
+
+<!-- Web Development Hero Section -->
+   <section class="service-hero1">
+    <!-- Animated Code Background Elements -->
+    <div class="code-bg-elements1">
+        <div class="code-element1">
+            <span>&lt;div class="app"&gt;</span>
+            <span>&nbsp;&nbsp;&lt;Header /&gt;</span>
+            <span>&nbsp;&nbsp;&lt;Main /&gt;</span>
+            <span>&nbsp;&nbsp;&lt;Footer /&gt;</span>
+            <span>&lt;/div&gt;</span>
+        </div>
+        <div class="code-element1">
+            <span>function calculateROI() {</span>
+            <span>&nbsp;&nbsp;return revenue - cost;</span>
+            <span>}</span>
+        </div>
+        <div class="code-element1">
+            <span>@media (max-width: 768px) {</span>
+            <span>&nbsp;&nbsp;.container {</span>
+            <span>&nbsp;&nbsp;&nbsp;&nbsp;padding: 1rem;</span>
+            <span>&nbsp;&nbsp;}</span>
+            <span>}</span>
+        </div>
+        <div class="code-element1">
+            <span>const api = async () => {</span>
+            <span>&nbsp;&nbsp;const data = await fetch();</span>
+            <span>&nbsp;&nbsp;return data.json();</span>
+            <span>};</span>
+        </div>
+    </div>
+
+    <div class="container">
+        <div class="hero-content1">
+            <div class="service-badge1">
+                <i class="fas fa-code"></i>
+                <span>Professional Web Development</span>
+            </div>
+            
+            <h1 class="hero-title1">
+                Modern Web Development for <span class="title-gradient">Global Businesses</span>
+            </h1>
+            
+            <p class="hero-subtitle1">
+                I build fast, scalable, and secure web applications that drive business growth. 
+                From responsive websites to complex web applications, I deliver solutions that 
+                perform exceptionally across all devices and platforms.
+            </p>
+            
+            <!-- Tech Stack Badges -->
+            <div class="tech-badges">
+                <div class="tech-badge react">
+                    <i class="fab fa-react"></i>
+                    <span>React.js</span>
+                </div>
+                <div class="tech-badge vue">
+                    <i class="fab fa-vuejs"></i>
+                    <span>Vue.js</span>
+                </div>
+                <div class="tech-badge node">
+                    <i class="fab fa-node-js"></i>
+                    <span>Node.js</span>
+                </div>
+                <div class="tech-badge python">
+                    <i class="fab fa-python"></i>
+                    <span>Python/Django</span>
+                </div>
+            </div>
+            
+            <!-- CTA Buttons -->
+            <div class="hero-cta">
+                <a href="{% url 'startproject' %}" class="cta-button primary">
+                    <i class="fas fa-rocket"></i>
+                    Start Your Project
+                </a>
+                {% comment %} <a href="#portfolio" class="cta-button secondary">
+                    <i class="fas fa-eye"></i>
+                    View Case Studies {% endcomment %}
+                </a>
+            </div>
+        </div>
+    </div>
+</section>
+
+    <!-- Service Overview -->
+    <section class="service-overview">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Comprehensive Web Solutions</h2>
+                <p class="section-subtitle">
+                    End-to-end web development services tailored to meet your business objectives 
+                    and exceed user expectations.
+                </p>
+            </div>
+            
+            <div class="overview-grid">
+                <div class="overview-card">
+                    <div class="overview-icon">
+                        <i class="fas fa-laptop-code"></i>
+                    </div>
+                    <h3>Responsive Design</h3>
+                    <p>
+                        Websites that look perfect and function flawlessly on all devices, 
+                        from desktop to mobile.
+                    </p>
+                </div>
+                
+                <div class="overview-card">
+                    <div class="overview-icon">
+                        <i class="fas fa-bolt"></i>
+                    </div>
+                    <h3>Performance Optimized</h3>
+                    <p>
+                        Lightning-fast websites with optimized load times for better 
+                        user experience and SEO rankings.
+                    </p>
+                </div>
+                
+                <div class="overview-card">
+                    <div class="overview-icon">
+                        <i class="fas fa-shield-alt"></i>
+                    </div>
+                    <h3>Secure & Scalable</h3>
+                    <p>
+                        Robust security measures and scalable architecture that grows 
+                        with your business needs.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Technology Stack -->
+    <section class="tech-stack">
+    <div class="container">
+        <div class="section-header">
+            <h2 class="section-title">Modern Technology Stack</h2>
+            <p class="section-subtitle">
+                Leveraging cutting-edge technologies to build efficient, scalable, 
+                and future-proof web solutions.
+            </p>
+        </div>
+        
+        <div class="tech-grid">
+            <!-- Frontend Technologies -->
+            <div class="tech-card">
+                <div class="tech-icon" style="color: #61dafb;">
+                    <i class="fab fa-react"></i>
+                </div>
+                <h4>React.js</h4>
+                <p>Modern frontend development for dynamic, interactive user interfaces with component-based architecture</p>
+                <div class="tech-tags">
+                    <span class="tech-tag">Next.js</span>
+                    <span class="tech-tag">Redux</span>
+                    <span class="tech-tag">TypeScript</span>
+                </div>
+            </div>
+            
+            <div class="tech-card">
+                <div class="tech-icon" style="color: #41b883;">
+                    <i class="fab fa-vuejs"></i>
+                </div>
+                <h4>Vue.js</h4>
+                <p>Progressive JavaScript framework for building intuitive and maintainable user interfaces</p>
+                <div class="tech-tags">
+                    <span class="tech-tag">Vuex</span>
+                    <span class="tech-tag">Vue Router</span>
+                    <span class="tech-tag">Vite</span>
+                </div>
+            </div>
+            
+            <!-- Django Card with Special Styling -->
+            <div class="tech-card django-card">
+                <div class="tech-icon" style="color: #092e20;">
+                    <i class="fab fa-python"></i>
+                </div>
+                <h4>Django</h4>
+                <p>High-level Python web framework for rapid development of secure and scalable applications</p>
+                <div class="tech-tags">
+                    <span class="tech-tag">Django REST</span>
+                    <span class="tech-tag">PostgreSQL</span>
+                    <span class="tech-tag">Authentication</span>
+                </div>
+            </div>
+            
+            <!-- Backend Technologies -->
+            <div class="tech-card">
+                <div class="tech-icon" style="color: #339933;">
+                    <i class="fab fa-node-js"></i>
+                </div>
+                <h4>Node.js</h4>
+                <p>JavaScript runtime for building scalable network applications and backend services</p>
+                <div class="tech-tags">
+                    <span class="tech-tag">Express.js</span>
+                    <span class="tech-tag">REST APIs</span>
+                    <span class="tech-tag">JWT Auth</span>
+                </div>
+            </div>
+            
+            <!-- Database Technologies -->
+            <div class="tech-card">
+                <div class="tech-icon" style="color: #007396;">
+                    <i class="fas fa-database"></i>
+                </div>
+                <h4>Database Systems</h4>
+                <p>Comprehensive data management solutions for storing and retrieving application data efficiently</p>
+                <div class="tech-tags">
+                    <span class="tech-tag">MongoDB</span>
+                    <span class="tech-tag">PostgreSQL</span>
+                    <span class="tech-tag">MySQL</span>
+                    <span class="tech-tag">Redis</span>
+                </div>
+            </div>
+            
+            <!-- DevOps & Cloud -->
+            <div class="tech-card">
+                <div class="tech-icon" style="color: #ff6b35;">
+                    <i class="fas fa-server"></i>
+                </div>
+                <h4>DevOps & Cloud</h4>
+                <p>Scalable deployment solutions and cloud infrastructure for reliable application hosting</p>
+                <div class="tech-tags">
+                    <span class="tech-tag">AWS</span>
+                    <span class="tech-tag">Docker</span>
+                    <span class="tech-tag">CI/CD</span>
+                    <span class="tech-tag">Nginx</span>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Additional Note -->
+        <div style="text-align: center; margin-top: 4rem; padding: 2rem; background: rgba(255,255,255,0.8); border-radius: var(--border-radius); border: 1px solid var(--gray-light);">
+            <h3 style="color: var(--dark-color); margin-bottom: 1rem; font-size: 1.5rem;">
+                <i class="fas fa-lightbulb" style="color: #f59e0b;"></i> Full-Stack Expertise
+            </h3>
+            <p style="color: var(--text-light); max-width: 700px; margin: 0 auto;">
+                With expertise in both Django (Python) and Node.js ecosystems, I can choose the perfect 
+                technology stack for your project's specific needs, whether it's rapid prototyping with Django 
+                or building real-time applications with Node.js.
+            </p>
+        </div>
+    </div>
+</section>
+
+    <!-- Detailed Services -->
+    <section class="services-detailed">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Web Development Services</h2>
+                <p class="section-subtitle">
+                    Custom web development solutions designed to meet specific business needs 
+                    and deliver measurable results.
+                </p>
+            </div>
+            
+            <div class="services-grid">
+                <div class="service-item">
+                    <div class="service-icon">
+                        <i class="fas fa-shopping-cart"></i>
+                    </div>
+                    <h3>E-commerce Development</h3>
+                    <p>
+                        Custom online stores with secure payment integration, 
+                        inventory management, and customer relationship tools.
+                    </p>
+                    <ul class="service-features">
+                        <li><i class="fas fa-check"></i> Shopping cart & checkout systems</li>
+                        <li><i class="fas fa-check"></i> Payment gateway integration</li>
+                        <li><i class="fas fa-check"></i> Product management dashboard</li>
+                        <li><i class="fas fa-check"></i> Order tracking system</li>
+                    </ul>
+                </div>
+                
+                <div class="service-item">
+                    <div class="service-icon">
+                        <i class="fas fa-business-time"></i>
+                    </div>
+                    <h3>Corporate Websites</h3>
+                    <p>
+                        Professional business websites that establish credibility 
+                        and effectively communicate your brand message.
+                    </p>
+                    <ul class="service-features">
+                        <li><i class="fas fa-check"></i> Responsive design</li>
+                        <li><i class="fas fa-check"></i> CMS integration</li>
+                        <li><i class="fas fa-check"></i> SEO optimization</li>
+                        <li><i class="fas fa-check"></i> Contact & lead forms</li>
+                    </ul>
+                </div>
+                
+                <div class="service-item">
+                    <div class="service-icon">
+                        <i class="fas fa-mobile-alt"></i>
+                    </div>
+                    <h3>Web Applications</h3>
+                    <p>
+                        Custom web applications that streamline business processes 
+                        and improve operational efficiency.
+                    </p>
+                    <ul class="service-features">
+                        <li><i class="fas fa-check"></i> User authentication systems</li>
+                        <li><i class="fas fa-check"></i> Real-time data processing</li>
+                        <li><i class="fas fa-check"></i> API development & integration</li>
+                        <li><i class="fas fa-check"></i> Admin dashboards</li>
+                    </ul>
+                </div>
+                
+                <div class="service-item">
+                    <div class="service-icon">
+                        <i class="fas fa-rocket"></i>
+                    </div>
+                    <h3>Web App Maintenance</h3>
+                    <p>
+                        Ongoing support and maintenance to ensure your website 
+                        remains secure, updated, and performing optimally.
+                    </p>
+                    <ul class="service-features">
+                        <li><i class="fas fa-check"></i> Security updates & monitoring</li>
+                        <li><i class="fas fa-check"></i> Performance optimization</li>
+                        <li><i class="fas fa-check"></i> Bug fixes & troubleshooting</li>
+                        <li><i class="fas fa-check"></i> Regular backups</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Development Process -->
+    <section class="process-timeline">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Development Process</h2>
+                <p class="section-subtitle">
+                    A structured approach to ensure project success, from concept to deployment.
+                </p>
+            </div>
+            
+            <div class="timeline">
+                <div class="timeline-item">
+                    <div class="timeline-number">01</div>
+                    <div class="timeline-content">
+                        <h3>Discovery & Planning</h3>
+                        <p>
+                            Understanding your business goals, target audience, and project 
+                            requirements. Creating detailed specifications and project timelines.
+                        </p>
+                    </div>
+                </div>
+                
+                <div class="timeline-item">
+                    <div class="timeline-number">02</div>
+                    <div class="timeline-content">
+                        <h3>Design & Prototyping</h3>
+                        <p>
+                            Creating wireframes and mockups. Developing interactive prototypes 
+                            for user testing and feedback before development begins.
+                        </p>
+                    </div>
+                </div>
+                
+                <div class="timeline-item">
+                    <div class="timeline-number">03</div>
+                    <div class="timeline-content">
+                        <h3>Development</h3>
+                        <p>
+                            Building the website or application using modern technologies. 
+                            Implementing all features with clean, maintainable code.
+                        </p>
+                    </div>
+                </div>
+                
+                <div class="timeline-item">
+                    <div class="timeline-number">04</div>
+                    <div class="timeline-content">
+                        <h3>Testing & Quality Assurance</h3>
+                        <p>
+                            Rigorous testing across devices and browsers. Performance 
+                            optimization, security testing, and user acceptance testing.
+                        </p>
+                    </div>
+                </div>
+                
+                <div class="timeline-item">
+                    <div class="timeline-number">05</div>
+                    <div class="timeline-content">
+                        <h3>Deployment & Launch</h3>
+                        <p>
+                            Final deployment to production servers. DNS configuration, 
+                            SSL certificates, and final performance checks.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Pricing Plans -->
+    <section class="pricing-plans">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Transparent Pricing</h2>
+                <p class="section-subtitle">
+                    Flexible pricing options tailored to different business needs and project scopes.
+                </p>
+            </div>
+            
+            <div class="pricing-grid">
+                <div class="pricing-card">
+                    <div class="pricing-header">
+                        <h3>Starter</h3>
+                        <div class="pricing-price">$2,000+</div>
+                        <div class="pricing-period">Basic Website Package</div>
+                    </div>
+                    <ul class="pricing-features">
+                        <li><i class="fas fa-check"></i> Up to 5 pages</li>
+                        <li><i class="fas fa-check"></i> Responsive Design</li>
+                        <li><i class="fas fa-check"></i> Basic SEO Setup</li>
+                        <li><i class="fas fa-check"></i> Contact Form</li>
+                        <li class="disabled"><i class="fas fa-times"></i> E-commerce Features</li>
+                        <li class="disabled"><i class="fas fa-times"></i> Custom Web App</li>
+                    </ul>
+                    <a href="{% url 'contact' %}" class="pricing-btn outline">Get Started</a>
+                </div>
+                
+                <div class="pricing-card featured">
+                    <div class="pricing-header">
+                        <h3>Business</h3>
+                        <div class="pricing-price">$4,000+</div>
+                        <div class="pricing-period">Most Popular</div>
+                    </div>
+                    <ul class="pricing-features">
+                        <li><i class="fas fa-check"></i> Up to 15 pages</li>
+                        <li><i class="fas fa-check"></i> CMS Integration</li>
+                        <li><i class="fas fa-check"></i> Advanced SEO</li>
+                        <li><i class="fas fa-check"></i> Custom Features</li>
+                        <li><i class="fas fa-check"></i> Basic E-commerce</li>
+                        <li class="disabled"><i class="fas fa-times"></i> Complex Web App</li>
+                    </ul>
+                    <a href="{% url 'contact' %}" class="pricing-btn">Get Started</a>
+                </div>
+                
+                <div class="pricing-card">
+                    <div class="pricing-header">
+                        <h3>Enterprise</h3>
+                        <div class="pricing-price">Custom</div>
+                        <div class="pricing-period">Full Custom Solution</div>
+                    </div>
+                    <ul class="pricing-features">
+                        <li><i class="fas fa-check"></i> Unlimited Pages</li>
+                        <li><i class="fas fa-check"></i> Full E-commerce</li>
+                        <li><i class="fas fa-check"></i> Custom Web Application</li>
+                        <li><i class="fas fa-check"></i> API Development</li>
+                        <li><i class="fas fa-check"></i> Ongoing Maintenance</li>
+                        <li><i class="fas fa-check"></i> Priority Support</li>
+                    </ul>
+                    <a href="{% url 'contact' %}" class="pricing-btn outline">Contact for Quote</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="service-cta">
+        <div class="container">
+            <div class="cta-content">
+                <h2>Ready to Build Your Digital Presence?</h2>
+                <p>
+                    Let's discuss your project requirements and create a custom web solution 
+                    that drives your business forward. International clients welcome.
+                </p>
+                <div class="cta-buttons">
+                    <a href="{% url 'contact' %}" class="cta-btn primary">
+                        <i class="fas fa-calendar-check"></i>
+                        Schedule a Consultation
+                    </a>
+                    <a href="{% url 'portfolio' %}" class="cta-btn secondary">
+                        <i class="fas fa-eye"></i>
+                        View My Portfolio
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+
+
+
+
+
+{% endblock %}

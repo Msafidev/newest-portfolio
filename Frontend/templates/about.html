@@ -1,0 +1,397 @@
+{% extends 'base.html' %}
+{% block title %}About{% endblock %}
+{% load static %}
+
+{% block content %}
+
+
+ <section class="about-hero6">
+        <div class="page-container6">
+            <div class="hero-layout6">
+                <div class="hero-content6">
+                    <div class="profile-badge6">
+                        <i class="fas fa-user-tie6"></i>
+                        <span>About Me</span>
+                    </div>
+                    
+                    <h1 class="hero-heading6">
+                        Austine Ochieng — <span class="heading-highlight6">Designer & Developer</span>
+                    </h1>
+                    
+                    <p class="hero-subtitle6">
+                        Bridging creativity with technology to build exceptional digital experiences
+                    </p>
+                    
+                    <p class="hero-description6">
+                        With expertise spanning graphic design, UI/UX, web development, and brand strategy, 
+                        I create comprehensive digital solutions that drive business growth and engage 
+                        audiences across international markets.
+                    </p>
+                    
+                    <div class="hero-stats6">
+                        <div class="stat-item6">
+                            <div class="stat-number6">50+</div>
+                            <div class="stat-label6">Projects</div>
+                        </div>
+                        <div class="stat-item6">
+                            <div class="stat-number6">15+</div>
+                            <div class="stat-label6">Countries</div>
+                        </div>
+                        <div class="stat-item6">
+                            <div class="stat-number6">5+</div>
+                            <div class="stat-label6">Years Experience</div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="profile-visual6">
+                    <div class="profile-image-wrapper6">
+                        <div class="experience-badge6">
+                            <i class="fas fa-award"></i>
+                            <span>5+ Years Experience</span>
+                        </div>
+                        <img src="{% static 'images/pic.png' %}" 
+                             alt="Austine Ochieng - Professional Designer & Developer" 
+                             class="profile-image6">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Journey Section -->
+    <section class="journey-section">
+        <div class="page-container">
+            <div class="section-title">
+                <h2 class="main-title">My Professional Journey</h2>
+                <p class="section-description">
+                    From creative beginnings to technical mastery — my path to becoming 
+                    a full-stack designer and developer.
+                </p>
+            </div>
+            
+            <div class="journey-timeline">
+                <div class="timeline-item">
+                    <div class="timeline-year">2018</div>
+                    <div class="timeline-content">
+                        <h3>Graphic Design Foundation</h3>
+                        <p>
+                            Started my career in graphic design, mastering Adobe Creative Suite 
+                            and developing a strong foundation in visual communication and 
+                            branding principles.
+                        </p>
+                    </div>
+                </div>
+                
+                <div class="timeline-item">
+                    <div class="timeline-year">2019</div>
+                    <div class="timeline-content">
+                        <h3>Web Development Exploration</h3>
+                        <p>
+                            Expanded into web development, learning HTML, CSS, JavaScript, 
+                            and discovering the power of combining design with code to 
+                            create interactive experiences.
+                        </p>
+                    </div>
+                </div>
+                
+                <div class="timeline-item">
+                    <div class="timeline-year">2020</div>
+                    <div class="timeline-content">
+                        <h3>UI/UX Specialization</h3>
+                        <p>
+                            Deepened expertise in user experience design, focusing on 
+                            user research, wireframing, prototyping, and creating 
+                            intuitive digital interfaces.
+                        </p>
+                    </div>
+                </div>
+                
+                <div class="timeline-item">
+                    <div class="timeline-year">2021</div>
+                    <div class="timeline-content">
+                        <h3>Full-Stack Development</h3>
+                        <p>
+                            Mastered backend technologies including Django, Node.js, 
+                            and database management, becoming a complete full-stack 
+                            developer.
+                        </p>
+                    </div>
+                </div>
+                
+                <div class="timeline-item">
+                    <div class="timeline-year">2022</div>
+                    <div class="timeline-content">
+                        <h3>International Projects</h3>
+                        <p>
+                            Began working with international clients across 4 continents, 
+                            adapting designs and solutions for global markets and 
+                            diverse audiences.
+                        </p>
+                    </div>
+                </div>
+                
+                <div class="timeline-item">
+                    <div class="timeline-year">2023</div>
+                    <div class="timeline-content">
+                        <h3>Brand Strategy Integration</h3>
+                        <p>
+                            Integrated brand strategy with technical execution, 
+                            offering comprehensive digital solutions that align 
+                            business goals with user needs.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section class="expertise-section">
+        <div class="page-container">
+            <div class="section-title">
+                <h2 class="main-title">My Skills & Expertise</h2>
+                <p class="section-description">
+                    A balanced combination of creative design and technical development skills
+                </p>
+            </div>
+            
+            <div class="skills-grid">
+                <div class="skill-category">
+                    <div class="category-header">
+                        <div class="category-icon">
+                            <i class="fas fa-palette"></i>
+                        </div>
+                        <h3 class="category-title">Design Skills</h3>
+                    </div>
+                    <ul class="skills-list">
+                        <li class="skill-item">
+                            <div class="skill-name">
+                                <span>UI/UX Design</span>
+                                <span class="skill-level">Expert</span>
+                            </div>
+                            <div class="skill-bar">
+                                <div class="skill-progress" style="width: 95%"></div>
+                            </div>
+                        </li>
+                        <li class="skill-item">
+                            <div class="skill-name">
+                                <span>Graphic Design</span>
+                                <span class="skill-level">Expert</span>
+                            </div>
+                            <div class="skill-bar">
+                                <div class="skill-progress" style="width: 90%"></div>
+                            </div>
+                        </li>
+                        <li class="skill-item">
+                            <div class="skill-name">
+                                <span>Brand Identity</span>
+                                <span class="skill-level">Advanced</span>
+                            </div>
+                            <div class="skill-bar">
+                                <div class="skill-progress" style="width: 85%"></div>
+                            </div>
+                        </li>
+                        <li class="skill-item">
+                            <div class="skill-name">
+                                <span>Prototyping</span>
+                                <span class="skill-level">Expert</span>
+                            </div>
+                            <div class="skill-bar">
+                                <div class="skill-progress" style="width: 92%"></div>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+                
+                <div class="skill-category">
+                    <div class="category-header">
+                        <div class="category-icon">
+                            <i class="fas fa-code"></i>
+                        </div>
+                        <h3 class="category-title">Development Skills</h3>
+                    </div>
+                    <ul class="skills-list">
+                        <li class="skill-item">
+                            <div class="skill-name">
+                                <span>Frontend (React/Vue)</span>
+                                <span class="skill-level">Expert</span>
+                            </div>
+                            <div class="skill-bar">
+                                <div class="skill-progress" style="width: 90%"></div>
+                            </div>
+                        </li>
+                        <li class="skill-item">
+                            <div class="skill-name">
+                                <span>Backend (Django/Node)</span>
+                                <span class="skill-level">Advanced</span>
+                            </div>
+                            <div class="skill-bar">
+                                <div class="skill-progress" style="width: 88%"></div>
+                            </div>
+                        </li>
+                        <li class="skill-item">
+                            <div class="skill-name">
+                                <span>Database Management</span>
+                                <span class="skill-level">Advanced</span>
+                            </div>
+                            <div class="skill-bar">
+                                <div class="skill-progress" style="width: 85%"></div>
+                            </div>
+                        </li>
+                        <li class="skill-item">
+                            <div class="skill-name">
+                                <span>API Development</span>
+                                <span class="skill-level">Expert</span>
+                            </div>
+                            <div class="skill-bar">
+                                <div class="skill-progress" style="width: 87%"></div>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Philosophy Section -->
+    <section class="philosophy-section">
+        <div class="page-container">
+            <div class="section-title">
+                <h2 class="main-title">My Design Philosophy</h2>
+                <p class="section-description">
+                    Principles that guide my approach to creating exceptional digital experiences
+                </p>
+            </div>
+            
+            <div class="philosophy-grid">
+                <div class="philosophy-card">
+                    <div class="philosophy-icon">
+                        <i class="fas fa-users"></i>
+                    </div>
+                    <h3>User-Centered Approach</h3>
+                    <p>
+                        Every design decision starts with understanding user needs, 
+                        behaviors, and pain points to create intuitive solutions.
+                    </p>
+                </div>
+                
+                <div class="philosophy-card">
+                    <div class="philosophy-icon">
+                        <i class="fas fa-lightbulb"></i>
+                    </div>
+                    <h3>Strategic Innovation</h3>
+                    <p>
+                        Balancing creativity with business objectives to deliver 
+                        innovative solutions that drive measurable results.
+                    </p>
+                </div>
+                
+                <div class="philosophy-card">
+                    <div class="philosophy-icon">
+                        <i class="fas fa-bolt"></i>
+                    </div>
+                    <h3>Technical Excellence</h3>
+                    <p>
+                        Writing clean, efficient code and using modern technologies 
+                        to build scalable, high-performance applications.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Values Section -->
+    <section class="values-section">
+        <div class="page-container">
+            <div class="section-title">
+                <h2 class="main-title">Core Values</h2>
+                <p class="section-description">
+                    The principles that define my work ethic and client relationships
+                </p>
+            </div>
+            
+            <div class="values-container">
+                <div class="values-grid">
+                    <div class="value-item">
+                        <div class="value-header">
+                            <div class="value-icon">
+                                <i class="fas fa-handshake"></i>
+                            </div>
+                            <h3 class="value-title">Integrity</h3>
+                        </div>
+                        <p class="value-description">
+                            Honest communication, transparent processes, and 
+                            delivering exactly what's promised — every time.
+                        </p>
+                    </div>
+                    
+                    <div class="value-item">
+                        <div class="value-header">
+                            <div class="value-icon">
+                                <i class="fas fa-bullseye"></i>
+                            </div>
+                            <h3 class="value-title">Precision</h3>
+                        </div>
+                        <p class="value-description">
+                            Attention to detail in every pixel, line of code, 
+                            and strategic decision to ensure flawless execution.
+                        </p>
+                    </div>
+                    
+                    <div class="value-item">
+                        <div class="value-header">
+                            <div class="value-icon">
+                                <i class="fas fa-comments"></i>
+                            </div>
+                            <h3 class="value-title">Collaboration</h3>
+                        </div>
+                        <p class="value-description">
+                            Working closely with clients as partners, valuing 
+                            feedback, and maintaining open communication.
+                        </p>
+                    </div>
+                    
+                    <div class="value-item">
+                        <div class="value-header">
+                            <div class="value-icon">
+                                <i class="fas fa-rocket"></i>
+                            </div>
+                            <h3 class="value-title">Innovation</h3>
+                        </div>
+                        <p class="value-description">
+                            Constantly learning and adapting to bring fresh, 
+                            effective solutions to every project challenge.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="about-cta">
+        <div class="page-container">
+            <div class="cta-content">
+                <h2 class="cta-heading">Let's Create Something Amazing Together</h2>
+                <p class="cta-text">
+                    Ready to bring your vision to life with professional design 
+                    and development expertise? Let's discuss how we can work 
+                    together to achieve your goals.
+                </p>
+                <div class="cta-buttons">
+                    <a href="{% url 'startproject' %}" class="cta-button primary">
+                        <i class="fas fa-paper-plane"></i>
+                        Start a Conversation
+                    </a>
+                    <a href="{% url 'portfolio' %}" class="cta-button secondary">
+                        <i class="fas fa-eye"></i>
+                        View My Work
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+{% endblock %}

@@ -1,0 +1,283 @@
+{% extends 'base.html' %}
+{% block title %}Start Project{% endblock %}
+{% load static %}
+
+{% block content %}
+
+
+ <div class="creative-wrapper">
+        <header class="inspiration-header">
+            <h1 class="idea-spark">Project Catalyst</h1>
+            <p class="vision-callout">Let's transform your vision into reality. Tell me about the project you'd like me to work on!</p>
+        </header>
+
+        <div class="creative-progress">
+            <div class="progress-line"></div>
+            <div class="progress-fill" id="progressFill"></div>
+            <div class="progress-step active" data-step="1">
+                <span>1</span>
+            </div>
+            <div class="progress-step" data-step="2">
+                <span>2</span>
+            </div>
+            <div class="progress-step" data-step="3">
+                <span>3</span>
+            </div>
+            <div class="progress-step" data-step="4">
+                <span>4</span>
+            </div>
+        </div>
+
+        <main class="imagination-canvas">
+            <!-- Step 1: Project Type -->
+            <div class="vision-section active" id="step1">
+                <h2 class="section-title">What's Your Vision?</h2>
+                <p class="section-subtitle">Select the type of project you'd like me to work on. This helps me understand your needs better.</p>
+                
+                <div class="idea-grid" id="projectTypeGrid">
+                    <div class="inspiration-card" data-type="web">
+                        <div class="card-sparkle">
+                            <i class="fas fa-code"></i>
+                        </div>
+                        <h3 class="card-title">Web Development</h3>
+                        <p class="card-desc">Website, web app, e-commerce, or custom web solution.</p>
+                        <div class="card-check">
+                            <i class="fas fa-check"></i>
+                        </div>
+                    </div>
+                    
+                    <div class="inspiration-card" data-type="uiux">
+                        <div class="card-sparkle">
+                            <i class="fas fa-paint-brush"></i>
+                        </div>
+                        <h3 class="card-title">UI/UX Design</h3>
+                        <p class="card-desc">Interface design, user experience, wireframes, prototypes.</p>
+                        <div class="card-check">
+                            <i class="fas fa-check"></i>
+                        </div>
+                    </div>
+                    
+                    <div class="inspiration-card" data-type="brand">
+                        <div class="card-sparkle">
+                            <i class="fas fa-bullhorn"></i>
+                        </div>
+                        <h3 class="card-title">Brand Identity</h3>
+                        <p class="card-desc">Logo, branding, visual identity, brand guidelines.</p>
+                        <div class="card-check">
+                            <i class="fas fa-check"></i>
+                        </div>
+                    </div>
+                    
+                    <div class="inspiration-card" data-type="graphic">
+                        <div class="card-sparkle">
+                            <i class="fas fa-palette"></i>
+                        </div>
+                        <h3 class="card-title">Graphic Design</h3>
+                        <p class="card-desc">Print design, digital graphics, illustrations, marketing materials.</p>
+                        <div class="card-check">
+                            <i class="fas fa-check"></i>
+                        </div>
+                    </div>
+                    
+                    <div class="inspiration-card" data-type="other">
+                        <div class="card-sparkle">
+                            <i class="fas fa-lightbulb"></i>
+                        </div>
+                        <h3 class="card-title">Something Else</h3>
+                        <p class="card-desc">Tell me about your unique project idea or combination.</p>
+                        <div class="card-check">
+                            <i class="fas fa-check"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Step 2: Project Details -->
+            <div class="vision-section" id="step2">
+                <h2 class="section-title">Tell Me More</h2>
+                <p class="section-subtitle">Share the details about your project so I can understand exactly what you need.</p>
+                
+                <form class="creative-form" id="projectDetails">
+                    <div class="input-row">
+                        <div class="imagination-group">
+                            <label class="dream-label">
+                                <i class="fas fa-user"></i> Your Name
+                            </label>
+                            <input type="text" class="vision-input" placeholder="What should I call you?" required>
+                        </div>
+                        
+                        <div class="imagination-group">
+                            <label class="dream-label">
+                                <i class="fas fa-envelope"></i> Email Address
+                            </label>
+                            <input type="email" class="vision-input" placeholder="Where should I reply?" required>
+                        </div>
+                    </div>
+                    
+                    <div class="input-row">
+                        <div class="imagination-group">
+                            <label class="dream-label">
+                                <i class="fas fa-building"></i> Company / Organization
+                            </label>
+                            <input type="text" class="vision-input" placeholder="Your business name (if applicable)">
+                        </div>
+                        
+                        <div class="imagination-group">
+                            <label class="dream-label">
+                                <i class="fas fa-phone"></i> Phone Number
+                            </label>
+                            <input type="tel" class="vision-input" placeholder="Optional but helpful">
+                        </div>
+                    </div>
+                    
+                    <div class="imagination-group">
+                        <label class="dream-label">
+                            <i class="fas fa-file-alt"></i> Project Title
+                        </label>
+                        <input type="text" class="vision-input" placeholder="Give your project a name" required>
+                    </div>
+                    
+                    <div class="imagination-group">
+                        <label class="dream-label">
+                            <i class="fas fa-align-left"></i> Project Description
+                        </label>
+                        <textarea class="dream-textarea" placeholder="Describe your project in detail. What are your goals? Who is your target audience? What specific requirements do you have?" required></textarea>
+                    </div>
+                </form>
+            </div>
+
+            <!-- Step 3: Requirements -->
+            <div class="vision-section" id="step3">
+                <h2 class="section-title">Project Requirements</h2>
+                <p class="section-subtitle">Help me understand the scope and timeline of your project.</p>
+                
+                <div class="creative-form">
+                    <div class="creative-budget">
+                        <label class="dream-label">
+                            <i class="fas fa-piggy-bank"></i> Project Budget
+                        </label>
+                        <input type="range" class="budget-slider" min="500" max="50000" step="500" value="10000" id="budgetSlider">
+                        <div class="budget-display">
+                            <div class="budget-range">$500</div>
+                            <div class="budget-value" id="budgetValue">$10,000</div>
+                            <div class="budget-range">$50,000+</div>
+                        </div>
+                    </div>
+                    
+                    <div class="imagination-group">
+                        <label class="dream-label">
+                            <i class="fas fa-calendar-alt"></i> Project Timeline
+                        </label>
+                        <div class="timeline-options">
+                            <div class="time-choice">
+                                <input type="radio" id="timeline-urgent" name="timeline" value="urgent">
+                                <label class="time-label" for="timeline-urgent">
+                                    <i class="fas fa-bolt"></i><br>
+                                    Urgent<br>
+                                    <small>(1-2 weeks)</small>
+                                </label>
+                            </div>
+                            
+                            <div class="time-choice">
+                                <input type="radio" id="timeline-standard" name="timeline" value="standard" checked>
+                                <label class="time-label" for="timeline-standard">
+                                    <i class="fas fa-tasks"></i><br>
+                                    Standard<br>
+                                    <small>(3-6 weeks)</small>
+                                </label>
+                            </div>
+                            
+                            <div class="time-choice">
+                                <input type="radio" id="timeline-flexible" name="timeline" value="flexible">
+                                <label class="time-label" for="timeline-flexible">
+                                    <i class="fas fa-clock"></i><br>
+                                    Flexible<br>
+                                    <small>(6+ weeks)</small>
+                                </label>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="imagination-group">
+                        <label class="dream-label">
+                            <i class="fas fa-link"></i> Reference Links
+                        </label>
+                        <textarea class="dream-textarea" placeholder="Links to inspiration, competitors, similar projects, or any reference materials..."></textarea>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Step 4: Final Step -->
+            <div class="vision-section" id="step4">
+                <h2 class="section-title">Almost There!</h2>
+                <p class="section-subtitle">A few final questions to ensure we're perfectly aligned.</p>
+                
+                <div class="creative-form">
+                    <div class="imagination-group">
+                        <label class="dream-label">
+                            <i class="fas fa-users"></i> How did you hear about me?
+                        </label>
+                        <select class="idea-select">
+                            <option value="">Select an option</option>
+                            <option value="search">Search Engine</option>
+                            <option value="social">Social Media</option>
+                            <option value="referral">Referral</option>
+                            <option value="portfolio">My Portfolio</option>
+                            <option value="other">Other</option>
+                        </select>
+                    </div>
+                    
+                    <div class="imagination-group">
+                        <label class="dream-label">
+                            <i class="fas fa-paperclip"></i> Attach Files (Optional)
+                        </label>
+                        <input type="file" class="vision-input" style="padding: 15px;" multiple 
+                               accept=".jpg,.jpeg,.png,.pdf,.doc,.docx,.psd,.ai,.sketch,.fig">
+                        <small style="color: var(--sketch-gray); display: block; margin-top: 8px;">
+                            You can upload images, documents, or design files (max 10MB each)
+                        </small>
+                    </div>
+                    
+                    <div class="imagination-group">
+                        <label class="dream-label">
+                            <i class="fas fa-comment"></i> Additional Notes
+                        </label>
+                        <textarea class="dream-textarea" placeholder="Anything else you'd like me to know about your project, expectations, or requirements..."></textarea>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Success Screen -->
+            <div class="celebration-section" id="successScreen">
+                <div class="celebration-emoji">🎉</div>
+                <h2 class="success-title">Project Submitted!</h2>
+                <p class="success-message">
+                    Thank you for sharing your vision with me! I've received your project details and will review them carefully. 
+                    You'll hear back from me within 24 hours with initial thoughts and next steps.
+                </p>
+                <p class="success-message">
+                    <strong>What happens next?</strong><br>
+                    1. I'll review your project requirements<br>
+                    2. Prepare a customized proposal<br>
+                    3. Schedule a free consultation call<br>
+                    4. We'll start bringing your vision to life!
+                </p>
+                <button class="inspiration-btn btn-submit" onclick="location.reload()">
+                    <i class="fas fa-redo"></i> Start Another Project
+                </button>
+            </div>
+
+            <!-- Navigation -->
+            <div class="creative-navigation">
+                <button class="inspiration-btn btn-prev" id="prevBtn">
+                    <i class="fas fa-arrow-left"></i> Previous
+                </button>
+                <button class="inspiration-btn btn-next" id="nextBtn">
+                    Next Step <i class="fas fa-arrow-right"></i>
+                </button>
+            </div>
+        </main>
+
+
+
+{% endblock %}

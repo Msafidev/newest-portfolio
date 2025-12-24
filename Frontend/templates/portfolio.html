@@ -1,0 +1,357 @@
+{% extends 'base.html' %}
+{% block title %}Portfolio{% endblock %}
+{% load static %}
+
+{% block content %}
+
+<section class="portfolio-showcase">
+    <div class="container">
+        <div class="showcase-content">
+            <div class="work-badge">
+                <i class="fas fa-briefcase"></i>
+                <span>Professional Portfolio</span>
+            </div>
+            
+            <h1 class="showcase-heading">
+                Showcase of <span class="light-gradient">International Projects</span>
+            </h1>
+            
+            <p class="showcase-description">
+                A curated collection of my best work across web development, 
+                UI/UX design, graphic design, and brand identity for global clients.
+            </p>
+        </div>
+    </div>
+</section>
+
+<!-- Work Categories Filter -->
+<section class="work-filter">
+    <div class="container">
+        <div class="filter-wrapper">
+            <button class="filter-option active" data-filter="all">
+                <i class="fas fa-layer-group"></i>
+                All Projects
+            </button>
+            <button class="filter-option" data-filter="web-development">
+                <i class="fas fa-code"></i>
+                Web Development
+            </button>
+            <button class="filter-option" data-filter="ui-ux">
+                <i class="fas fa-palette"></i>
+                UI/UX Design
+            </button>
+            <button class="filter-option" data-filter="graphic-design">
+                <i class="fas fa-paint-brush"></i>
+                Graphic Design
+            </button>
+            <button class="filter-option" data-filter="brand-identity">
+                <i class="fas fa-bullseye"></i>
+                Brand Identity
+            </button>
+        </div>
+    </div>
+</section>
+
+<!-- Projects Gallery -->
+<section class="work-gallery">
+    <div class="container">
+        <div class="gallery-container">
+            <!-- Web Development Projects -->
+            <div class="work-item" data-category="web-development">
+                <div class="work-preview">
+                    <div class="preview-overlay">
+                        <a href="#" class="preview-action">
+                            <i class="fas fa-external-link-alt"></i> View Project
+                        </a>
+                    </div>
+                </div>
+                <div class="work-info">
+                    <span class="work-category">
+                        <i class="fas fa-code"></i> Web Development
+                    </span>
+                    <h3 class="work-title">E-commerce Platform for International Retailer</h3>
+                    <p class="work-description">
+                        Full-stack e-commerce solution with custom CMS, payment integration, 
+                        and multi-language support for global markets.
+                    </p>
+                    <div class="work-tags">
+                        <span class="tech-tag">React.js</span>
+                        <span class="tech-tag">Node.js</span>
+                        <span class="tech-tag">MongoDB</span>
+                        <span class="tech-tag">Stripe API</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- UI/UX Design Projects -->
+            <div class="work-item" data-category="ui-ux">
+                <div class="work-preview">
+                    <div class="preview-overlay">
+                        <a href="#" class="preview-action">
+                            <i class="fas fa-external-link-alt"></i> View Project
+                        </a>
+                    </div>
+                </div>
+                <div class="work-info">
+                    <span class="work-category">
+                        <i class="fas fa-palette"></i> UI/UX Design
+                    </span>
+                    <h3 class="work-title">Mobile Banking App Redesign</h3>
+                    <p class="work-description">
+                        Complete redesign of mobile banking experience focusing on 
+                        user experience, accessibility, and modern interface design.
+                    </p>
+                    <div class="work-tags">
+                        <span class="tech-tag">Figma</span>
+                        <span class="tech-tag">User Research</span>
+                        <span class="tech-tag">Prototyping</span>
+                        <span class="tech-tag">Mobile Design</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Graphic Design Projects -->
+            <div class="work-item" data-category="graphic-design">
+                <div class="work-preview">
+                    <div class="preview-overlay">
+                        <a href="#" class="preview-action">
+                            <i class="fas fa-external-link-alt"></i> View Project
+                        </a>
+                    </div>
+                </div>
+                <div class="work-info">
+                    <span class="work-category">
+                        <i class="fas fa-paint-brush"></i> Graphic Design
+                    </span>
+                    <h3 class="work-title">Product Packaging for Luxury Brand</h3>
+                    <p class="work-description">
+                        Complete packaging design system for luxury skincare line, 
+                        including box design, labels, and retail display materials.
+                    </p>
+                    <div class="work-tags">
+                        <span class="tech-tag">Adobe Illustrator</span>
+                        <span class="tech-tag">Packaging Design</span>
+                        <span class="tech-tag">Print Production</span>
+                        <span class="tech-tag">Brand Collateral</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Brand Identity Projects -->
+            <div class="work-item" data-category="brand-identity">
+                <div class="work-preview">
+                    <div class="preview-overlay">
+                        <a href="#" class="preview-action">
+                            <i class="fas fa-external-link-alt"></i> View Project
+                        </a>
+                    </div>
+                </div>
+                <div class="work-info">
+                    <span class="work-category">
+                        <i class="fas fa-bullseye"></i> Brand Identity
+                    </span>
+                    <h3 class="work-title">Complete Brand Identity for Tech Startup</h3>
+                    <p class="work-description">
+                        End-to-end brand identity including logo system, color palette, 
+                        typography, and comprehensive brand guidelines.
+                    </p>
+                    <div class="work-tags">
+                        <span class="tech-tag">Logo Design</span>
+                        <span class="tech-tag">Brand Strategy</span>
+                        <span class="tech-tag">Style Guide</span>
+                        <span class="tech-tag">Visual Identity</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Web Development Project 2 -->
+            <div class="work-item" data-category="web-development">
+                <div class="work-preview">
+                    <div class="preview-overlay">
+                        <a href="#" class="preview-action">
+                            <i class="fas fa-external-link-alt"></i> View Project
+                        </a>
+                    </div>
+                </div>
+                <div class="work-info">
+                    <span class="work-category">
+                        <i class="fas fa-code"></i> Web Development
+                    </span>
+                    <h3 class="work-title">Real Estate Management Dashboard</h3>
+                    <p class="work-description">
+                        Custom web application for property management with 
+                        analytics, reporting, and tenant management features.
+                    </p>
+                    <div class="work-tags">
+                        <span class="tech-tag">Django</span>
+                        <span class="tech-tag">PostgreSQL</span>
+                        <span class="tech-tag">REST API</span>
+                        <span class="tech-tag">Chart.js</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- UI/UX Design Project 2 -->
+            <div class="work-item" data-category="ui-ux">
+                <div class="work-preview">
+                    <div class="preview-overlay">
+                        <a href="#" class="preview-action">
+                            <i class="fas fa-external-link-alt"></i> View Project
+                        </a>
+                    </div>
+                </div>
+                <div class="work-info">
+                    <span class="work-category">
+                        <i class="fas fa-palette"></i> UI/UX Design
+                    </span>
+                    <h3 class="work-title">Healthcare Appointment Booking System</h3>
+                    <p class="work-description">
+                        User-centered design for medical appointment platform 
+                        focusing on accessibility and streamlined user flow.
+                    </p>
+                    <div class="work-tags">
+                        <span class="tech-tag">Wireframing</span>
+                        <span class="tech-tag">User Testing</span>
+                        <span class="tech-tag">Responsive Design</span>
+                        <span class="tech-tag">Adobe XD</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Achievements Section -->
+<section class="success-metrics">
+    <div class="container">
+        <div class="metrics-header">
+            <h2 class="metrics-title">Portfolio Statistics</h2>
+            <p class="metrics-subtitle">
+                Key metrics that demonstrate the impact and reach of my work 
+                across different industries and regions.
+            </p>
+        </div>
+        
+        <div class="metrics-grid">
+            <div class="metric-card">
+                <div class="metric-icon">
+                    <i class="fas fa-project-diagram"></i>
+                </div>
+                <div class="metric-value">50+</div>
+                <div class="metric-label">Projects Completed</div>
+            </div>
+            
+            <div class="metric-card">
+                <div class="metric-icon">
+                    <i class="fas fa-globe-americas"></i>
+                </div>
+                <div class="metric-value">15+</div>
+                <div class="metric-label">Countries Served</div>
+            </div>
+            
+            <div class="metric-card">
+                <div class="metric-icon">
+                    <i class="fas fa-smile"></i>
+                </div>
+                <div class="metric-value">98%</div>
+                <div class="metric-label">Client Satisfaction</div>
+            </div>
+            
+            <div class="metric-card">
+                <div class="metric-icon">
+                    <i class="fas fa-rocket"></i>
+                </div>
+                <div class="metric-value">40%</div>
+                <div class="metric-label">Average Growth</div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Client Feedback -->
+<section class="client-reviews">
+    <div class="container">
+        <div class="reviews-header">
+            <h2 class="reviews-title">Client Testimonials</h2>
+            <p class="reviews-subtitle">
+                What international clients say about working with me 
+                and the impact of my design and development solutions.
+            </p>
+        </div>
+        
+        <div class="reviews-grid">
+            <div class="review-card">
+                <p class="review-text">
+                    "Working with MsafiTechs transformed our digital presence. 
+                    The attention to detail and understanding of our international 
+                    audience was exceptional."
+                </p>
+                <div class="reviewer-details">
+                    <div class="reviewer-image">JS</div>
+                    <div class="reviewer-info">
+                        <h4>James Smith</h4>
+                        <p>CEO, TechSolutions Inc. (USA)</p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="review-card">
+                <p class="review-text">
+                    "The brand identity created for our company perfectly captures 
+                    our values and resonates with our global customer base. 
+                    Highly recommended!"
+                </p>
+                <div class="reviewer-details">
+                    <div class="reviewer-image">MA</div>
+                    <div class="reviewer-info">
+                        <h4>Maria Alvarez</h4>
+                        <p>Marketing Director, GlobalBrands (Spain)</p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="review-card">
+                <p class="review-text">
+                    "Exceptional web development work. The e-commerce platform 
+                    they built handles our international transactions seamlessly 
+                    and has boosted our sales significantly."
+                </p>
+                <div class="reviewer-details">
+                    <div class="reviewer-image">RT</div>
+                    <div class="reviewer-info">
+                        <h4>Robert Tanaka</h4>
+                        <p>Operations Manager, RetailGlobal (Japan)</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Action Section -->
+<section class="project-action">
+    <div class="container">
+        <div class="action-content">
+            <h2 class="action-heading">Ready to Start Your Project?</h2>
+            <p class="action-text">
+                Let's discuss how we can create something remarkable together. 
+                I work with clients worldwide to bring their ideas to life.
+            </p>
+            <div class="action-buttons">
+                <a href="{% url 'startproject' %}" class="action-button primary">
+                    <i class="fas fa-paper-plane"></i>
+                    Start a Project
+                </a>
+                <a href="{% url 'webdev' %}" class="action-button secondary">
+                    <i class="fas fa-cogs"></i>
+                    View Services
+                </a>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+
+
+{% endblock %}

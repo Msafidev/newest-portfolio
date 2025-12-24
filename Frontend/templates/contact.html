@@ -1,0 +1,61 @@
+{% extends 'base.html' %}
+{% block title %}Contact{% endblock %}
+{% load static %}
+
+{% block content %}
+
+<div class="contact-section style-1" id="contact-section">
+    <div class="contact-info">
+        <h2 class="contact-title">Get in Touch</h2>
+        <p class="contact-description">
+            Have a project in mind? Want to collaborate? Feel free to reach out using the contact form or through our contact details below.
+        </p>
+        <!-- info content unchanged -->
+    </div>
+
+    <div class="contact-form">
+        <h2 class="contact-title">Send a Message</h2>
+        <p class="contact-description">Fill out the form below and we'll get back to you as soon as possible.</p>
+
+        <!-- 🔽 ONLY FIXES HERE -->
+        <form id="contactForm" method="POST" action="">
+            {% csrf_token %}
+
+            <div class="form-group">
+                <label class="form-label" for="name">Full Name</label>
+                <input type="text" id="name" name="name"
+                       class="form-control" placeholder="Enter your name" required>
+            </div>
+
+            <div class="form-group">
+                <label class="form-label" for="email">Email Address</label>
+                <input type="email" id="email" name="email"
+                       class="form-control" placeholder="Enter your email" required>
+            </div>
+
+            <div class="form-group">
+                <label class="form-label" for="subject">Subject</label>
+                <input type="text" id="subject" name="subject"
+                       class="form-control" placeholder="What is this regarding?" required>
+            </div>
+
+            <div class="form-group">
+                <label class="form-label" for="message">Your Message</label>
+                <textarea id="message" name="message"
+                          class="form-control" placeholder="Type your message here..." required></textarea>
+            </div>
+
+            <div id="formMessage" class="form-message" style="display: none;"></div>
+            <button type="submit" class="styled-btn modern-btn">
+            <span class="btn-text">Send Message</span>
+            <span class="btn-icon"><i class="fas fa-paper-plane"></i></span>
+            </button>
+        </form>
+        <!-- 🔼 END FIX -->
+    </div>
+</div>
+
+
+
+
+{% endblock %}
