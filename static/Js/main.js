@@ -662,3 +662,90 @@ document.addEventListener('DOMContentLoaded', () => {
     
     console.log('JavaScript initialized successfully.');
 });
+
+// Simple toggle function
+function toggleMobileMenu() {
+    const menu = document.getElementById('navMenu');
+    const button = document.getElementById('mobileToggle');
+    const icon = button.querySelector('i');
+    
+    menu.classList.toggle('active');
+    
+    // Change icon
+    if (menu.classList.contains('active')) {
+        icon.classList.replace('fa-bars', 'fa-times');
+    } else {
+        icon.classList.replace('fa-times', 'fa-bars');
+    }
+}
+
+// Add click event
+document.getElementById('mobileToggle').addEventListener('click', toggleMobileMenu);
+
+
+document.addEventListener('DOMContentLoaded', function() {
+    const mobileToggle = document.getElementById('mobileToggle');
+    const navMenu = document.getElementById('navMenu');
+    const navbar = document.getElementById('navbar');
+    
+    // Toggle mobile menu
+    mobileToggle.addEventListener('click', function(e) {
+        e.preventDefault();
+        e.stopPropagation();
+        
+        // Toggle menu visibility
+        navMenu.classList.toggle('show');
+        navbar.classList.toggle('mobile-open');
+        
+        // Change icon
+        const icon = this.querySelector('i');
+        if (navMenu.classList.contains('show')) {
+            icon.classList.remove('fa-bars');
+            icon.classList.add('fa-times');
+        } else {
+            icon.classList.remove('fa-times');
+            icon.classList.add('fa-bars');
+        }
+    });
+    
+    // Close menu when clicking outside
+    document.addEventListener('click', function(e) {
+        if (!navMenu.contains(e.target) && !mobileToggle.contains(e.target)) {
+            navMenu.classList.remove('show');
+            navbar.classList.remove('mobile-open');
+            
+            // Reset icon
+            const icon = mobileToggle.querySelector('i');
+            icon.classList.remove('fa-times');
+            icon.classList.add('fa-bars');
+        }
+    });
+    
+    // Close menu when clicking a link (optional)
+    const navLinks = document.querySelectorAll('.nav-link');
+    navLinks.forEach(link => {
+        link.addEventListener('click', function() {
+            if (window.innerWidth <= 768) {
+                navMenu.classList.remove('show');
+                navbar.classList.remove('mobile-open');
+                
+                // Reset icon
+                const icon = mobileToggle.querySelector('i');
+                icon.classList.remove('fa-times');
+                icon.classList.add('fa-bars');
+            }
+        });
+    });
+    
+    // Handle dropdown menus for mobile
+    const dropdownToggle = document.querySelector('#servicesDropdown > .nav-link');
+    if (dropdownToggle) {
+        dropdownToggle.addEventListener('click', function(e) {
+            if (window.innerWidth <= 768) {
+                e.preventDefault();
+                const dropdown = this.parentElement;
+                dropdown.classList.toggle('dropdown-open');
+            }
+        });
+    }
+});

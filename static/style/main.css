@@ -235,7 +235,7 @@
             box-shadow: 0 6px 20px rgba(37, 99, 235, 0.35);
         }
 
-        /* Mobile Menu Toggle */
+        /* Mobile Menu Toggle
         .mobile-toggle {
             display: none;
             background: none;
@@ -253,65 +253,138 @@
 
         .mobile-toggle:hover {
             background: rgba(37, 99, 235, 0.05);
-        }
+        } */
 
         
 
         /* Responsive Design */
-        @media (max-width: 992px) {
-            .mobile-toggle {
-                display: flex;
-            }
+        /* Mobile Toggle Button */
+.mobile-toggle {
+    display: none;
+    background: none;
+    border: none;
+    font-size: 1.5rem;
+    color: #333;
+    cursor: pointer;
+    padding: 10px;
+    z-index: 1000;
+}
 
-            .nav-menu {
-                position: fixed;
-                top: 70px;
-                right: -100%;
-                width: 300px;
-                height: calc(100vh - 70px);
-                background: white;
-                flex-direction: column;
-                padding: 2rem;
-                transition: var(--transition);
-                box-shadow: var(--shadow-lg);
-                overflow-y: auto;
-                gap: 0;
-            }
+/* Mobile Styles */
+@media (max-width: 768px) {
+    /* Show mobile toggle button */
+    .mobile-toggle {
+        display: block;
+    }
+    
+    /* Hide desktop menu by default */
+    .nav-menu {
+        position: fixed;
+        top: 70px; /* Adjust based on your navbar height */
+        left: 0;
+        width: 100%;
+        background: white;
+        flex-direction: column;
+        padding: 20px;
+        box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+        z-index: 999;
+        transform: translateY(-100%);
+        opacity: 0;
+        visibility: hidden;
+        transition: all 0.3s ease-in-out;
+        max-height: 0;
+        overflow: hidden;
+    }
+    
+    /* Show mobile menu when toggled */
+    .nav-menu.show {
+        transform: translateY(0);
+        opacity: 1;
+        visibility: visible;
+        max-height: 1000px;
+        overflow-y: auto;
+    }
+    
+    /* Navbar items for mobile */
+    .nav-item {
+        width: 100%;
+        margin: 5px 0;
+    }
+    
+    .nav-link {
+        padding: 12px 15px;
+        border-radius: 8px;
+        display: flex;
+        align-items: center;
+        width: 100%;
+    }
+    
+    .nav-link:hover {
+        background: #f5f5f5;
+    }
+    
+    /* CTA button adjustments */
+    .nav-cta {
+        margin-top: 15px;
+        padding: 12px 20px;
+        text-align: center;
+        width: 100%;
+        display: block;
+    }
+    
+    /* Dropdown menu for mobile */
+    .dropdown-menu {
+        position: static;
+        width: 100%;
+        box-shadow: none;
+        border: none;
+        background: #f9f9f9;
+        margin-top: 5px;
+        padding: 0;
+        max-height: 0;
+        overflow: hidden;
+        transition: max-height 0.3s ease;
+    }
+    
+    /* Show dropdown when open */
+    #servicesDropdown.dropdown-open .dropdown-menu {
+        max-height: 200px;
+        padding: 10px 0;
+    }
+    
+    .dropdown-item {
+        padding: 10px 20px;
+        border-left: 3px solid transparent;
+    }
+    
+    .dropdown-item:hover {
+        border-left-color: #007bff;
+        background: #f0f0f0;
+    }
+    
+    /* Adjust navbar container for mobile */
+    .navbar-container {
+        flex-wrap: wrap;
+        padding: 10px 20px;
+    }
+    
+    /* Prevent body scrolling when menu is open */
+    body.mobile-menu-open {
+        overflow: hidden;
+    }
+}
 
-            .nav-menu.active {
-                right: 0;
-            }
-
-            .nav-item {
-                width: 100%;
-                padding: 0.8rem 0;
-                border-bottom: 1px solid rgba(226, 232, 240, 0.5);
-            }
-
-            .nav-link {
-                padding: 0.5rem 0;
-                justify-content: space-between;
-            }
-
-            .dropdown-menu {
-                position: static;
-                opacity: 1;
-                visibility: visible;
-                transform: none;
-                box-shadow: none;
-                border: none;
-                padding: 0.5rem 0 0.5rem 1.5rem;
-                display: none;
-            }
-
-            .dropdown.active .dropdown-menu {
-                display: block;
-            }
-
-            .nav-cta {
-                margin-top: 1rem;
-                justify-content: center;
-            }
+/* Tablet styles (optional) */
+@media (max-width: 1024px) and (min-width: 769px) {
+    /* Adjust for tablet if needed */
+    .nav-menu {
+        gap: 15px;
+    }
+    
+    .nav-link span {
+        font-size: 0.9rem;
+    }
+}
 
             .language-selector {
                 margin-left: 0;
@@ -319,7 +392,6 @@
                 justify-content: center;
                 display: flex;
             }
-        }
 
         @media (max-width: 768px) {
             .navbar-container {
