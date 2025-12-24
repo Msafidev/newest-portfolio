@@ -114,6 +114,176 @@ document.addEventListener('DOMContentLoaded', () => {
     console.log('JavaScript initialized successfully.');
 });
 
+
+
+/**
+ * =============================================
+ * TYPING ANIMATION FOR HERO SECTION
+ * =============================================
+ */
+
+function initTypingAnimation() {
+    const typedText = document.getElementById('typed-text');
+    const typedCursor = document.querySelector('.typed-cursor');
+    
+    if (!typedText || !typedCursor) return;
+    
+    const professions = [
+        "UI/UX Designer",
+        "Web Developer", 
+        "Brand Strategist",
+        "Graphic Designer",
+        "Digital Creator"
+    ];
+    
+    let currentProfession = 0;
+    let charIndex = 0;
+    let isDeleting = false;
+    let typingSpeed = 100;
+    let cursorVisible = true;
+    
+    // Cursor blink effect
+    function blinkCursor() {
+        cursorVisible = !cursorVisible;
+        typedCursor.style.opacity = cursorVisible ? '1' : '0';
+    }
+    
+    // Start cursor blinking
+    setInterval(blinkCursor, 500);
+    
+    function typeEffect() {
+        const currentText = professions[currentProfession];
+        
+        if (isDeleting) {
+            // Delete character
+            typedText.textContent = currentText.substring(0, charIndex - 1);
+            charIndex--;
+            typingSpeed = 50; // Faster deletion
+            
+            // When deletion is complete
+            if (charIndex === 0) {
+                isDeleting = false;
+                currentProfession = (currentProfession + 1) % professions.length;
+                typingSpeed = 500; // Pause before typing next
+            }
+        } else {
+            // Type character
+            typedText.textContent = currentText.substring(0, charIndex + 1);
+            charIndex++;
+            typingSpeed = 100; // Normal typing speed
+            
+            // When typing is complete
+            if (charIndex === currentText.length) {
+                isDeleting = true;
+                typingSpeed = 1500; // Pause before deleting
+            }
+        }
+        
+        setTimeout(typeEffect, typingSpeed);
+    }
+    
+    // Start typing animation after a delay
+    setTimeout(typeEffect, 1000);
+}
+
+/**
+ * Alternative: Simple rotating text without typing effect
+ */
+function initSimpleTextRotation() {
+    const typedText = document.getElementById('typed-text');
+    if (!typedText) return;
+    
+    const professions = [
+        "UI/UX Designer",
+        "Web Developer", 
+        "Brand Strategist",
+        "Graphic Designer",
+        "Digital Creator"
+    ];
+    
+    let currentIndex = 0;
+    
+    function rotateText() {
+        typedText.textContent = professions[currentIndex];
+        currentIndex = (currentIndex + 1) % professions.length;
+    }
+    
+    // Initial text
+    typedText.textContent = professions[0];
+    
+    // Rotate every 3 seconds
+    setInterval(rotateText, 3000);
+}
+
+/**
+ * Enhanced typing animation with colors
+ */
+function initEnhancedTypingAnimation() {
+    const typedText = document.getElementById('typed-text');
+    const typedCursor = document.querySelector('.typed-cursor');
+    
+    if (!typedText || !typedCursor) return;
+    
+    const professions = [
+        {text: "UI/UX Designer", color: "#667eea"},
+        {text: "Web Developer", color: "#f59e0b"},
+        {text: "Brand Strategist", color: "#10b981"},
+        {text: "Graphic Designer", color: "#ef4444"},
+        {text: "Digital Creator", color: "#8b5cf6"}
+    ];
+    
+    let currentProfession = 0;
+    let charIndex = 0;
+    let isDeleting = false;
+    let typingSpeed = 100;
+    
+    function typeEffect() {
+        const current = professions[currentProfession];
+        const currentText = current.text;
+        
+        if (isDeleting) {
+            typedText.textContent = currentText.substring(0, charIndex - 1);
+            charIndex--;
+            typingSpeed = 50;
+            
+            if (charIndex === 0) {
+                isDeleting = false;
+                currentProfession = (currentProfession + 1) % professions.length;
+                typingSpeed = 500;
+            }
+        } else {
+            typedText.textContent = currentText.substring(0, charIndex + 1);
+            typedText.style.color = current.color; // Change color for each profession
+            charIndex++;
+            typingSpeed = 100;
+            
+            if (charIndex === currentText.length) {
+                isDeleting = true;
+                typingSpeed = 1500;
+            }
+        }
+        
+        setTimeout(typeEffect, typingSpeed);
+    }
+    
+    // Start animation
+    setTimeout(typeEffect, 1000);
+}
+
+/**
+ * Initialize based on preference
+ * Call ONE of these functions in your main initialization
+ */
+document.addEventListener('DOMContentLoaded', () => {
+    // Choose ONE of these:
+    initTypingAnimation(); // Standard typing animation
+    // initSimpleTextRotation(); // Simple text rotation
+    // initEnhancedTypingAnimation(); // Enhanced with colors
+});
+
+
+
+
 /**
  * =============================================
  * PROJECT CATALYST FORM

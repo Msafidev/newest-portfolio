@@ -1374,10 +1374,12 @@
 
         .footer-bottom-content {
             display: flex;
-            justify-content: space-between;
             align-items: center;
             flex-wrap: wrap;
             gap: 1.5rem;
+            justify-content: center;
+            align-items: center;
+
         }
 
         .copyright {
